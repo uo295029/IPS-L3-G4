@@ -2,24 +2,24 @@ package model;
 
 import java.util.Date;
 
-public class Usuario {
+public class Empleado {
 
 	private String nombre;
 	private String apellido;
 	private String dni;
-	private int telefono;
-	private Date nacimiento;
+	private String telefono;
+	private Date fecha;
 	private String empleo;
 	private int sueldo;
 	private boolean deportivo;
 	
 	@SuppressWarnings("deprecation")
-	public Usuario(String nombre, String apellido, String dni, int telefono, int ano, int mes, int dia, String empleo, int sueldo, boolean deportivo) {
+	public Empleado(String nombre, String apellido, String dni, String telefono, int ano, int mes, int dia, String empleo, int sueldo, boolean deportivo) {
 		setNombre(nombre);
 		setApellido(apellido);
 		setDni(dni);
 		setTelefono(telefono);
-		setNacimiento(new Date(ano, mes, dia));
+		setFecha(new Date(ano, mes, dia));
 		setEmpleo(empleo);
 		setSueldo(sueldo);
 		setDeportivo(deportivo);
@@ -49,20 +49,20 @@ public class Usuario {
 		this.dni = dni;
 	}
 	
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 	
-	private void setTelefono(int telefono) {
+	private void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	
-	public Date getNacimiento() {
-		return nacimiento;
+	public Date getFecha() {
+		return fecha;
 	}
 	
-	private void setNacimiento(Date nacimiento) {
-		this.nacimiento = nacimiento;
+	private void setFecha(Date fecha) {
+		this.fecha = fecha;
 	}
 	
 	public String getEmpleo() {
