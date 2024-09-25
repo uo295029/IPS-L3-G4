@@ -9,7 +9,7 @@ public class EmpleadoModel {
 	public static final String SQL_ADD_EMPLOYEE = "insert into empleados (eNombre, eApellido, eDni, eTelefono, eFecha, eEmpleo, eSueldo, eDeportivo) values (?, ?, ?, ?, ?, ?, ?, ?)"; 
 	
 	public void addEmployee(Empleado e) {
-		validate(e.getNombre(), e.getApellido(), e.getDni(), e.getTelefono(), e.getFecha(), e.getEmpleo(), e.getSueldo());
+		validate(e.getNombre(), e.getApellido(), e.getDni(), e.getTelefono(), e.getFecha(), e.getEmpleo(), e.getSueldo()); 
 		
 	}
 	
