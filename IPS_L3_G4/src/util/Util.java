@@ -13,7 +13,7 @@ public class Util {
 	}
 	
 	public static void validateCondition(boolean condition, String message) {
-		if (!condition) throw new RuntimeException(message); //Cambiar por excepcion de la aplicacion
+		if (!condition) throw new RuntimeException(message); //Cambiar por excepcion de la aplicacion 
 	}
 	
 }
