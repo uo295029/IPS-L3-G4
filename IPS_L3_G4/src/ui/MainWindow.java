@@ -106,8 +106,19 @@ public class MainWindow extends JFrame {
   private JButton getManagerButton() {
     if (managerButton == null) {
       managerButton = new JButton("Gerente");
+      managerButton.addActionListener(new ActionListener() {
+      	public void actionPerformed(ActionEvent e) {
+      		openEmployeeGestionWindow();
+      	}
+      });
     }
     return managerButton;
+  }
+  
+  private void openEmployeeGestionWindow() {
+	  this.setVisible(false);
+	  EmployeeGestionWindow egw = new EmployeeGestionWindow(this);
+	  egw.setVisible(true);
   }
 
   /**

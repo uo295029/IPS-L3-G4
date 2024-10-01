@@ -6,14 +6,14 @@ import util.Util;
 
 public class EmployeeModel {
 
-	public static final String SQL_ADD_EMPLOYEE = "insert into empleados(eNombre, eApellido, eDni, eTelefono, eFecha, eEmpleo, eSueldo, eDeportivo) values (?, ?, ?, ?, ?, ?, ?, ?)"; 
+	public static final String SQL_ADD_EMPLOYEE = "insert into employees(name, surname, dni, phone, birthdate, job, salary, sport) values (?, ?, ?, ?, ?, ?, ?, ?)"; 
 	
-	public void addEmployee(Employee e) {
+	public static void addEmployee(Employee e) {
 		validate(e.getName(), e.getSurname(), e.getDni(), e.getPhone(), e.getBirthdate(), e.getJob(), e.getSalary(), e.isSport()); 
 		
 	}
 	
-	public void validate(String name, String surname, String dni, String phone, Date birthdate, String job, int salary, boolean sport) {
+	public static void validate(String name, String surname, String dni, String phone, Date birthdate, String job, int salary, boolean sport) {
 		Util.validateNotNull(name, "El nombre no puede ser null");
 		Util.validateNotNull(surname, "El apellido no puede ser null");
 		Util.validateNotNull(dni, "El dni no puede ser null");
@@ -27,7 +27,7 @@ public class EmployeeModel {
 	}
 	
 	@SuppressWarnings("deprecation")
-	private boolean checkAdult(Date birthdate) {
+	private static boolean checkAdult(Date birthdate) {
 		Date now = new Date();
 		int year = now.getYear();
 		now.setYear(year - 18);
